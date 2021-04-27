@@ -8,20 +8,20 @@ region: "ap-south-1"
 ########################## For K8s Master #########################
 
 instance_type_master : "t2.micro"
-image_master: "ami-0bcf5425cdc1d8a85"
+image_master: "<ami_id>"
 security_group_master : "kubernetes"
 count_master : 1
-subnet_id_master : "subnet-cb85f887"
+subnet_id_master : "<subnet_id>"
 instance_name_master: "K8s-master"
 
 ########################### For K8s Slave ##########################
 
 
 instance_type_slave : "t2.micro"
-image_slave: "ami-0bcf5425cdc1d8a85"
-security_group_slave : "kubernetes"
+image_slave: "<ami_id>"
+security_group_slave : "<Security_Group_Name>"
 count_slave: 1
-subnet_id_slave: "subnet-cb85f887"
+subnet_id_slave: "<Subnet_id>"
 instance_name_slave: "k8s-slave"
 
 
