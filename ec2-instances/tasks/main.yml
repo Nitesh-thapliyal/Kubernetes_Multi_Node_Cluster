@@ -1,0 +1,30 @@
+---
+# tasks file for ec2-instances
+
+- name: Launching Kubernetes master
+  amazon.aws.ec2:
+          region: "{{region}}"
+          key_name: "{{key}}"
+          instance_type: "{{instance_type_master}}"
+          image: "{{image_master}}"
+          wait: yes
+          group: "{{security_group_master}}"
+          count: "{{count_master}}"
+          vpc_subnet_id: "{{subnet_id_master}}"
+          assign_public_ip: yes
+          instance_tags:
+                  Name: "{{instance_name_master}}"
+
+- name: Launching Kubernetes Slave
+  amazon.aws.ec2:
+          region: "{{region}}"
+          key_name: "{{key}}"
+          instance_type: "{{instance_type_slave}}"
+          image: "{{image_slave}}"
+          wait: yes
+          group: "{{security_group_slave}}"
+          count: "{{count_slave}}"
+          vpc_subnet_id: "{{subnet_id_slave}}"
+          assign_public_ip: yes
+          instance_tags:
+                  Name: "{{instance_name_slave}}"
