@@ -1,7 +1,7 @@
 - hosts: tag_Name_K8s_master
   roles:
           - name: Configuring K8s Master
-            role: /etc/ansible/K8sMultiNodeCluster/K8s-master
+            role: <path_to_role_K8s-master>
 
 - hosts: tag_Name_k8s_slave
 
@@ -12,5 +12,5 @@
 
   roles:
           - name: Configuring K8s Slave
-            role: /etc/ansible/K8sMultiNodeCluster/K8s-slave
+            role: <path_to_role_K8s-slave>
 
