@@ -2,7 +2,7 @@
 # vars file for ec2-instances
 
 
-key: "ARTH"
+key: "<key-name>"
 region: "ap-south-1"
 
 ########################## For K8s Master #########################
